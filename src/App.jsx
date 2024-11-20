@@ -1,5 +1,12 @@
+import { useViewportSize } from './hooks';
 import './App.css';
 
 export const App = () => {
-	return <div></div>;
+	const { height, width } = useViewportSize();
+
+	return (
+		<div>
+			Width: {width}, height: {height}
+		</div>
+	);
 };
